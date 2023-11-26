@@ -61,6 +61,7 @@
             android:layout_margin="3dp"
             android:layout_weight="1"
             android:text="@string/minus"
+            android:onClick="onButtonMinusClick"
             app:cornerRadius="10dp"
             app:icon="@drawable/baseline_remove_24"
             style="@style/Widget.Material3.Button.Icon"
@@ -73,6 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:text="@string/ply"
+            android:onClick="onButtonMulClick"
             app:icon="@drawable/baseline_clear_24"
             style="@style/Widget.Material3.Button.Icon"
             app:cornerRadius="10dp"/>
@@ -83,6 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             android:text="@string/div"
+            android:onClick="onButtonDivClick"
             app:icon="@drawable/div_1"
             style="@style/Widget.Material3.Button.Icon"
             app:cornerRadius="10dp"/>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Calculator</string>
+    <string name="plus">Сложить</string>
+    <string name="minus">Вычесть</string>
+    <string name="ply">Умножить</string>
+    <string name="div">Вычесть</string>
+    <string name="_initial_output">Output will be here.</string>
+</resources>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Calculator</string>
+    <string name="plus">Plus</string>
+    <string name="minus">Min</string>
+    <string name="div">Div</string>
+    <string name="ply">Mult</string>
+    <string name="_initial_output">Output will be here.</string>
 </resources>

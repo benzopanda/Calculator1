@@ -24,57 +24,68 @@
         <EditText
             android:id="@+id/editTextValue1"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="@dimen/LineHeight"
             android:ems="10"
-            android:inputType="number|numberSigned"
-            android:text="123454321"
+            android:inputType="number|numberDecimal|numberSigned"
             />
+
 
         <EditText
             android:id="@+id/editTextValue2"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:text="543212345"
+            android:layout_height="@dimen/LineHeight"
             android:ems="10"
-            android:inputType="number|numberSigned"
-        />
+            android:inputType="number|numberDecimal|numberSigned" />
 
-
-
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/LineHeight"
         android:orientation="horizontal">
         <Button
             android:id="@+id/buttonPlus"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Button"
+            android:layout_margin="3dp"
+            android:text="@string/plus"
             android:onClick="onButtonPlusClick"
+            app:icon="@drawable/add_24"
+            style="@style/Widget.Material3.Button.Icon"
+            app:cornerRadius="10dp"
             />
+
         <Button
             android:id="@+id/buttonMinus"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Button" />
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:text="@string/minus"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/baseline_remove_24"
+            style="@style/Widget.Material3.Button.Icon"
+            />
+
         <Button
             android:id="@+id/buttonMul"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Button" />
+            android:layout_margin="3dp"
+            android:text="@string/ply"
+            app:icon="@drawable/baseline_clear_24"
+            style="@style/Widget.Material3.Button.Icon"
+            app:cornerRadius="10dp"/>
         <Button
             android:id="@+id/buttonDiv"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="Button" />
+            android:layout_margin="3dp"
+            android:text="@string/div"
+            app:icon="@drawable/div_1"
+            style="@style/Widget.Material3.Button.Icon"
+            app:cornerRadius="10dp"/>
 
 
     </LinearLayout>
@@ -84,11 +95,11 @@
         android:layout_height="70dp"
         android:text=""
     />
-    <Space
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        />
-</LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+    </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>

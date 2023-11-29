@@ -40,32 +40,33 @@ class MainActivity : AppCompatActivity() {
     }
     fun onButtonPlusClick(view : View)
     {
-        val val1 = binding.editTextValue1.text.toString().toDouble()
-        val val2 = binding.editTextValue2.text.toString().toDouble()
-        binding.textViewOutput.text = "  "+(val1+val2)
+        val val1 = binding.editTextValue1.editText?.text.toString().toDouble()
+        val val2 = binding.editTextValue2.editText?.text.toString().toDouble()
+        binding.textViewOutput.text = "  " + (val1 + val2)
         //textViewOutput.text = editTextValue1.text //.toString()
         //textViewOutput.text = "2222222"
+
     }
     fun onButtonMinusClick(view : View)
     {
-        val val1 = binding.editTextValue1.text.toString().toDouble()
-        val val2 = binding.editTextValue2.text.toString().toDouble()
+        val val1 = binding.editTextValue1.editText?.text.toString().toDouble()
+        val val2 = binding.editTextValue2.editText?.text.toString().toDouble()
         binding.textViewOutput.text = "  "+(val1-val2)
         //textViewOutput.text = editTextValue1.text //.toString()
         //textViewOutput.text = "2222222"
     }
     fun onButtonMulClick(view : View)
     {
-        val val1 = binding.editTextValue1.text.toString().toDouble()
-        val val2 = binding.editTextValue2.text.toString().toDouble()
+        val val1 = binding.editTextValue1.editText?.text.toString().toDouble()
+        val val2 = binding.editTextValue2.editText?.text.toString().toDouble()
         binding.textViewOutput.text = "  "+(val1*val2)
         //textViewOutput.text = editTextValue1.text //.toString()
         //textViewOutput.text = "2222222"
     }
     fun onButtonDivClick(view : View)
     {
-        val val1 = binding.editTextValue1.text.toString().toDouble()
-        val val2 = binding.editTextValue2.text.toString().toDouble()
+        val val1 = binding.editTextValue1.editText?.text.toString().toDouble()
+        val val2 = binding.editTextValue2.editText?.text.toString().toDouble()
         binding.textViewOutput.text = "  "+(val1/val2)
         //textViewOutput.text = editTextValue1.text //.toString()
         //textViewOutput.text = "2222222"

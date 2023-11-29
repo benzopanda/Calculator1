@@ -6,4 +6,6 @@
     <string name="ply">Умножить</string>
     <string name="div">Вычесть</string>
     <string name="_initial_output">Output will be here.</string>
+    <string name="label">Первое число</string>
+    <string name="label2">Второе число</string>
 </resources>

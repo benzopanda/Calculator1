@@ -23,36 +23,51 @@
             android:visibility="invisible"
             />
 
-        <EditText
+<!--        <EditText-->
+<!--            android:id="@+id/editTextValue1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/LineHeight"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="number|numberDecimal|numberSigned"-->
+<!--            />-->
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editTextValue1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/LineHeight"
-            android:ems="10"
-            android:inputType="number|numberDecimal|numberSigned"
-            />
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/editTextValue1"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:hint="label"-->
-<!--            app:boxStrokeWidth="1dp"-->
-<!--            app:boxStrokeColor="@color/secondary"-->
-<!--            >-->
+            android:hint="@string/label"
+            style="@style/CustomInput"
+            >
 
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                />-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal|numberSigned"
+                />
 
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
+        </com.google.android.material.textfield.TextInputLayout>
 
-
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editTextValue2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/LineHeight"
-            android:ems="10"
-            android:inputType="number|numberDecimal|numberSigned" />
+            android:hint="@string/label2"
+            style="@style/CustomInput"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal|numberSigned"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextValue2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/LineHeight"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="number|numberDecimal|numberSigned" />-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,6 +117,7 @@
             android:id="@+id/textViewOutput"
             android:layout_width="match_parent"
             android:layout_height="70dp"
+            android:layout_margin="3dp"
             android:text="@string/_initial_output"/>
 
         <Space

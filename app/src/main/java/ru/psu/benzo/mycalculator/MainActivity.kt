@@ -1,14 +1,19 @@
 package ru.psu.benzo.mycalculator
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import ru.psu.benzo.mycalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var resultLauncher: ActivityResultLauncher<Intent>
 
     private lateinit var binding : ActivityMainBinding
 
@@ -20,13 +25,25 @@ class MainActivity : AppCompatActivity() {
         binding.textViewOutput.text = getString(R.string._initial_output)
 
         binding.buttonPlus.setOnLongClickListener {
-            Toast.makeText(
-                this,
-                "Long click!",
-                Toast.LENGTH_LONG
-                ).show()   
+            val intent = Intent(this,MainActivity2::class.java)
+            startActivity(intent)
             return@setOnLongClickListener true
         }
+
+        var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
+            if (result.resultCode == Activity.RESULT_OK){
+                val data: Intent? = result.data
+                //doSomeOperations()
+            }
+        }
+
+        binding.buttonMinus.setOnLongClickListener {
+            val intent = Intent(this,MainActivity2::class.java)
+            resultLauncher.launch(intent)
+            return@setOnLongClickListener true
+        }
+
+
 
     }
     fun onButtonPlusClick(view : View)

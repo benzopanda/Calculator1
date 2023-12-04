@@ -8,4 +8,6 @@
     <string name="_initial_output">Output will be here.</string>
     <string name="label">Первое число</string>
     <string name="label2">Второе число</string>
+    <string name="settings">Настройки</string>
+    <string name="help">Помощь</string>
 </resources>

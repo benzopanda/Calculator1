@@ -7,4 +7,6 @@
     <string name="_initial_output">Output will be here.</string>
     <string name="label">1 Number</string>
     <string name="label2">2 Number</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
 </resources>

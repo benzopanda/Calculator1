@@ -4,6 +4,9 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -21,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // The Toolbar defined in the layout has the id "my_toolbar".
+        setSupportActionBar(binding.myToolbar)
+
+
 
         binding.textViewOutput.text = getString(R.string._initial_output)
 
@@ -79,4 +86,40 @@ class MainActivity : AppCompatActivity() {
             binding.textViewOutput.text = "  "+(val1/val2)
         }
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.activiti_calculator_menu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection.
+        return when (item.itemId) {
+            R.id.settings -> {
+                Toast.makeText(
+                    this,
+                    "Button pressed!",
+                    Toast.LENGTH_LONG
+                ).show()
+                true
+            }
+            R.id.help -> {
+                Toast.makeText(
+                    this,
+                    "Daddy chill!",
+                    Toast.LENGTH_LONG
+                ).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+
+
+    }
+
+
+
+
+
+
+
 }
